@@ -1,10 +1,10 @@
 import clsx from "clsx";
-import styles from './SectionApply.module.scss';
-import { Anchor, Layout } from '@charitypro/ui-kit';
+import { useTranslation } from 'react-i18next';
+import { Anchor, Layout, Title, Text } from '@charitypro/ui-kit';
 
+import styles from './SectionApply.module.scss';
 import volunteerCardImage from "@/assets/img_lighthouse_color.png";
 import fundCardImage from "@/assets/img_sailboat.png";
-import { useTranslation } from 'react-i18next';
 
 export type SectionApplyProps = {
   className?: string;
@@ -24,36 +24,37 @@ export type ApplyCardProps = {
 }
 
 export function ApplyCard({ className, image, title, description, link, isReverse }: ApplyCardProps) {
+  const { t } = useTranslation();
   return <div className={clsx(styles.card, className, {
     [ styles.reverse ]: isReverse
   })}>
     <img src={image} alt={title} />
     <div className={styles.cardContent}>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <Anchor className={styles.link} href={link}>Подробнее</Anchor>
+      <Title Tag="h3">{title}</Title>
+      <Text Tag="p">{description}</Text>
+      <Anchor className={styles.link} href={link}>{t("common.more")}</Anchor>
     </div>
   </div>;
 }
 
 export function SectionApply({ className, links }: SectionApplyProps) {
   const { t } = useTranslation();
+
   return <Layout.Section
     className={clsx(styles.container, className)}
     pt={{ content: styles.content }}
-    data-testid="SectionApply"
   >
     <ApplyCard
       image={volunteerCardImage}
       title={t("main.applyVolunteer")}
       description={t("main.volunteerMotivation")}
-      link={'/volunteers'}
+      link={links.volunteer.reg}
     />
     <ApplyCard
       image={fundCardImage}
       title={t("main.applyFund")}
       description={t("main.fundMotivation")}
-      link={'/foundations'}
+      link={links.fund.reg}
       isReverse={true}
     />
   </Layout.Section>;

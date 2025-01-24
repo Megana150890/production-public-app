@@ -26,7 +26,7 @@ export const Default: Story = {
 	args: {},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
-		const element = canvas.getByTestId('SectionHeroUrgant');
+		const element = canvas.getByTestId('Section');
 		await expect(element).toBeInTheDocument();
 	},
 };

@@ -34,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const element = canvas.getByTestId('SectionApply');
+    const element = canvas.getByTestId('Section');
     await expect(element).toBeInTheDocument();
   },
 };
