@@ -1,0 +1,111 @@
+@use '@styles/variables' as *;
+
+.container {
+	background-color: $backgroundColor;
+	background-image: url(@/assets/bg_SuccessStories.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  margin: 0 auto;
+	min-width: 1120px;
+}
+
+.box {
+  display: flex;
+	flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  align-self: flex-start;
+  margin: 0px;
+  color: $titleFontColor;
+  font-weight: $fontWeightBold;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+
+.cardContainer {
+	display: grid;
+  grid-template-columns: repeat(2, 1fr);
+	gap: 32px 32px;
+	justify-content: center;
+	padding: 48px 0 32px 0;
+}
+
+.content {
+  display: flex;
+  gap: 32px;
+  max-width: 544px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0 0;
+}
+
+.cloud {
+	width: 328px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+  margin: 0;
+}
+
+.content:nth-child(odd) .cloud {
+  padding: 24px 24px 24px 0;
+}
+
+.content:nth-child(even) .cloud {
+  padding: 24px 0 24px 24px;
+}
+
+.image {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	box-shadow: 0 0 24px #004D5F3D;
+}
+
+.data {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	text-align: left;
+}
+
+.dataRight {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	text-align: right;
+  font-family: $fontFamily;
+}
+
+.userName {
+  margin: 0;
+  color: $titleFontColor;
+  font-weight: $fontWeightBold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.category {
+  margin: 0;
+  color: #7b878f;
+  font-weight: $fontWeightMedium;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.description {
+  margin: 0;
+  color: $fontColor;
+  font-weight: $fontWeightMedium;
+  font-size: 16px;
+  line-height: 24px;
+  min-height: 200px;
+}

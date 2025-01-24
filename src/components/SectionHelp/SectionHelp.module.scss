@@ -1,0 +1,28 @@
+@use '@styles/variables' as *;
+
+.container {
+    margin: 0 auto;
+	background-color: $colorBgLightPrimary;
+	background-repeat: no-repeat;
+}
+
+.wrapper {
+	max-width: 1120px;
+	gap: 32px;
+}
+
+.title {
+    font: var(--font-xxl-bold);
+	font-size: 32px;
+    min-height: 48px;
+	letter-spacing: 0;
+}
+
+.content-block-text {
+	font-family: $fontFamily;
+	font-size: $fontSizeS;
+	line-height: $fontLineS;
+	font-weight: $fontWeightMedium;
+	color: $fontColor;
+	margin: 0;
+}

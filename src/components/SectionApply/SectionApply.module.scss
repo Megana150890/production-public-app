@@ -1,0 +1,109 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins/public/apply' as apply;
+@use '@styles/mixins/common/layout' as *;
+
+$imgShift: -20%;
+$padding: 4vmax;
+
+.container {
+  background-color: #374146;
+
+  .content {
+    background-color: $backgroundColor;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+
+    @include tablet {
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
+
+  @include tablet {
+    background-color: transparent;
+  }
+}
+
+.card {
+  background-color: #374146;
+  width: 100%;
+  //min-width: 487px;
+  min-height: 352px;
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  padding-top: $padding;
+
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    max-height: 340px;
+    height: 30vmax;
+    left: $imgShift * 0.25;
+    z-index: 1;
+
+    @include desktop {
+      left: $imgShift;
+    }
+  }
+}
+
+.cardContent {
+  flex-grow: 1;
+  padding-right: $padding;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 60%;
+  height: 80%;
+  text-align: right;
+  z-index: 2;
+
+  h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: white;
+    margin: 0;
+  }
+
+  p {
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: white;
+    flex-grow: 1;
+  }
+
+  .link {
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    color: #7DCDD7;
+    text-transform: uppercase;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  border-radius: 1rem 0 0 1rem;
+
+  .cardContent {
+    padding-right: 0;
+    padding-left: $padding;
+    text-align: left;
+  }
+
+  img {
+    left: auto;
+    right: $imgShift * 0.25;
+
+    @include desktop {
+      right: $imgShift;
+    }
+  }
+}

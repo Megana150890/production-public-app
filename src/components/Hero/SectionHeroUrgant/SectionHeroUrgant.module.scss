@@ -1,0 +1,154 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins/common/layout' as *;
+
+.container {
+  height: 90vmin;
+  min-height: 450px;
+  max-height: 752px;
+  background: $primary;
+  position: relative;
+
+  @include mobile {
+    min-height: 100vmax;
+  }
+
+  .content {
+    display: flex;
+    height: 70%;
+
+    @include mobile {
+      height: 90%;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    z-index: 2;
+
+    h1 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: #374146;
+      margin: 0 0 48px;
+
+      @include mobile {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #374146;
+      margin-bottom: 20px;
+      padding-right: 60px;
+    }
+
+    button {
+      display: flex;
+      position: relative;
+      z-index: 5;
+      place-self: flex-end;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      width: 120px;
+      height: 80px;
+      border: 4px solid #EA5A0A;
+      border-radius: 42px;
+      color: #EA5A0A;
+      margin-right: 60px;
+
+      &:hover {
+        background-color: #EA5A0A;
+        color: white;
+      }
+    }
+
+    .owner {
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
+
+      .ownerContent {
+        color: white;
+        font-size: 1rem;
+        line-height: 24px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+  }
+
+  .hero {
+    display: flex;
+    align-items: flex-end;
+
+    .image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      height: 98%;
+    }
+
+    .label {
+      background: #374045;
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      width: fit-content;
+      height: min-content;
+      max-width: 248px;
+      z-index: 2;
+
+      h2 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #F1F7FF;
+        line-height: 1.75rem;
+        margin: 0;
+      }
+      p {
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #F1F7FF;
+        line-height: 1.25rem;
+      }
+    }
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('@/assets/hero_bg.svg');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    z-index: 1;
+  }
+
+  @include tablet {
+    .hero {
+      display: none;
+    }
+
+    .text {
+      max-width: 100%;
+    }
+  }
+}

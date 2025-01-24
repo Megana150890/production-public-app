@@ -1,0 +1,83 @@
+@use '@styles/variables' as *;
+
+.container {
+  margin: 0 auto;
+  min-width: 1440px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 160px 80px;
+  gap: 48px;
+	background-color: $primary;
+	background-image: url(@/assets/bg_SectionQuestions.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.title {
+  align-self: flex-start;
+  margin: 0px;
+  color: $titleFontColor;
+  font-weight: $fontWeightBold;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+
+.list {
+	margin: 0;
+  padding: 0;
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 32px;
+}
+
+.cardElement {
+	display: grid;
+	padding: 24px;
+	gap: 8px;
+	max-width: 352px;
+	background-color: $backgroundColor;
+	box-shadow: 0px 0px 10px 0px rgba(55, 65, 70, 0.08);
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.cardTitle {
+  margin: 0;
+	max-width: 304px;
+	height: 48px;
+  color: $titleFontColor;
+  font-weight: $fontWeightBold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.cardSection {
+	display: flex;
+	max-width: 304px;
+	height: 48px;
+	gap: 16px;
+	align-items: end;
+}
+
+.cardDescription {
+  margin: 0;
+	width: 264px;
+	height: 48px;
+  color: $fontColor;
+  font-weight: $fontWeightMedium;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cardIcon {
+	width: 18px;
+	height: 16px;
+	margin-left: 3px;
+	margin-bottom: 4px;
+}

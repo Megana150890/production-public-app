@@ -1,0 +1,71 @@
+@use '@styles/variables' as *;
+
+.container {
+	background-color: $primary;
+	display: flex;
+	justify-content: center;
+	background-image: url(@/assets/bg_howitworks.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  max-width: 1120px;
+  padding: 80px 160px;
+}
+
+.wrap {
+		display: flex;
+		flex-direction: column;
+    align-items: flex-end;
+    gap: 48px;
+}
+
+.title {
+  align-self: flex-start;
+  margin: 0px;
+  color: $titleFontColor;
+  font-weight: $fontWeightBold;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+
+.workStepList {
+  align-self: flex-start;
+  margin: 0;
+	padding: 0;
+	display: flex;
+  flex-direction: row;
+	gap: 40px;
+	list-style: none;
+}
+
+.stepSection {
+	width: 113px;
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	margin-bottom: 32px;
+}
+
+.stepCount {
+  margin: 0px;
+  color: $backgroundColor;
+  font-weight: $fontWeightBold;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+
+.stepIcon {
+	width: 80px;
+	height: 65px;
+}
+
+.stepText {
+	max-width: 192px;
+  margin: 0;
+  color: $titleFontColor;
+  font-weight: $fontWeightMedium;
+  font-size: 16px;
+  line-height: 24px;
+}

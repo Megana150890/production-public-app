@@ -1,0 +1,123 @@
+@use '@styles/variables' as *;
+
+.container {
+	display: flex;
+	flex-direction: column;
+  margin: 0 auto;
+	gap: 32px;
+	width: 1120px;
+  font-family: $fontFamily;
+}
+
+.title {
+  align-self: flex-start;
+  margin: 0px;
+  color: $titleFontColor;
+  font-weight: $fontWeightBold;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+
+.description {
+  max-width: 736px;
+  margin: 0;
+  color: $fontColor;
+  font-weight: $fontWeightMedium;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bonusCards {
+	display: flex;
+  justify-content: space-between;
+	margin: 0;
+	gap: 32px;
+  padding: 0 0 48px;
+}
+
+// BonusCard
+.card {
+  display: flex;
+  flex-direction: column;
+	width: 352px;
+	height: 264px;
+  gap: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  &:hover {
+		box-shadow: 0px 0px 15px 0px rgba(55, 65, 70, 0.4);
+	}
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  margin: 0;
+  color: #7b878f;
+  font-weight: $fontWeightMedium;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.diamond {
+	display: flex;
+  gap: 4px;
+  background-color: $accent;
+  border-radius: 16px;
+  padding: 4px 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleDiamond {
+  margin: 0;
+  padding: 0;
+  color: $backgroundColor;
+  font-weight: $fontWeightMedium;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.imgDiamond {
+  width: 16px;
+  height: 16px;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  align-self: center;
+}
+
+.caption {
+  margin: 0px;
+  font-weight: $fontWeightBold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $secondary;
+}
+// end BonusCard
+
+.about {
+  display: flex;
+	column-gap: 33px;
+}
+
+.placeholder {
+  width: 736px;
+  height: 360px;
+	object-fit: cover;
+}
+
+.bottomDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
