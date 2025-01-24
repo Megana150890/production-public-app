@@ -1,7 +1,7 @@
 // Wrap your stories in the I18nextProvider component
 import type { Decorator } from '@storybook/react';
 import { Suspense, useEffect } from 'react';
-import i18n from '@/i18n.ts';
+import i18n from "./i18n.dev.ts";
 import { I18nextProvider } from 'react-i18next';
 
 export const LocaleDecorator: Decorator = (Story, context) => {

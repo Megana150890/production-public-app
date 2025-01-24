@@ -1,7 +1,7 @@
 import type { Preview } from '@storybook/react';
-//import i18n from '../src/i18n';
-//import { LocaleDecorator } from './LocaleDecorator.tsx';
+import { LocaleDecorator } from './LocaleDecorator.tsx';
 import "@styles/index.scss";
+import i18n from "./i18n.dev.ts";
 
 const preview: Preview = {
 	parameters: {
@@ -36,9 +36,9 @@ const preview: Preview = {
 			},
 		},
 	},
-	//decorators: [LocaleDecorator],
+	decorators: [LocaleDecorator],
 	globalTypes: {
-		/*locale: {
+		locale: {
 			name: 'Locale',
 			description: 'Internationalization locale',
 			toolbar: {
@@ -49,12 +49,12 @@ const preview: Preview = {
 				],
 				showName: true,
 			},
-		},*/
+		},
 	},
 };
 
-/*i18n.on('languageChanged', (locale) => {
+i18n.on('languageChanged', (locale) => {
 	document.dir = i18n.dir(locale);
-});*/
+});
 
 export default preview;
