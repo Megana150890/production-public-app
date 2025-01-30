@@ -441,9 +441,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@charitypro/ui-kit@portal:/D:/YP/PRO_CHARITY/PRODUCTION/ROOT/production-ui-kit::locator=%40procharity%2Fapp-static%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@charitypro/ui-kit@portal:/D:/YP/PRO_CHARITY/PRODUCTION/ROOT/production-ui-kit::locator=%40procharity%2Fapp-static%40workspace%3A."
+"@charitypro/ui-kit@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "@charitypro/ui-kit@npm:1.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40charitypro%2Fui-kit%2F1.0.2%2Fbcd1d5daa5ab7a5fd6d10f2a188f8b3b1b71c3a8"
   dependencies:
     clsx: "npm:^2.1.1"
     dayjs: "npm:^1.11.13"
@@ -454,8 +454,9 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router: ^7.1.1
+  checksum: 10/2ec82a455e6faa8e824a5b6e9993c45440ca1a82894ef07a085f71a639f0cc83e5b06e0d26db73a2e38bdd19a909a9f649175c69c6a29735b1aa889264b86390
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@chromatic-com/storybook@npm:3.2.3":
   version: 3.2.3
