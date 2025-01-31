@@ -443,7 +443,7 @@ __metadata:
 
 "@charitypro/ui-kit@npm:^1.0.2":
   version: 1.0.2
-  resolution: "@charitypro/ui-kit@npm:1.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40charitypro%2Fui-kit%2F1.0.2%2Fbcd1d5daa5ab7a5fd6d10f2a188f8b3b1b71c3a8"
+  resolution: "@charitypro/ui-kit@npm:1.0.2"
   dependencies:
     clsx: "npm:^2.1.1"
     dayjs: "npm:^1.11.13"
@@ -454,7 +454,7 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router: ^7.1.1
-  checksum: 10/2ec82a455e6faa8e824a5b6e9993c45440ca1a82894ef07a085f71a639f0cc83e5b06e0d26db73a2e38bdd19a909a9f649175c69c6a29735b1aa889264b86390
+  checksum: 10/1376b04f3cae2d5f540873a4051a8e6d7399eb108520aed02a541b9a60f5422822bf22c2d530daf26b73e1d0271d9c29fd49fd3157592cf1350f2639be14e14d
   languageName: node
   linkType: hard
 
