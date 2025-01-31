@@ -441,7 +441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@charitypro/ui-kit@npm:^1.0.0":
+"@charitypro/ui-kit@npm:^1.0.2":
   version: 1.0.2
   resolution: "@charitypro/ui-kit@npm:1.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40charitypro%2Fui-kit%2F1.0.2%2Fbcd1d5daa5ab7a5fd6d10f2a188f8b3b1b71c3a8"
   dependencies:
@@ -1329,7 +1329,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@procharity/app-static@workspace:."
   dependencies:
-    "@charitypro/ui-kit": "npm:^1.0.0"
+    "@charitypro/ui-kit": "npm:^1.0.2"
     "@chromatic-com/storybook": "npm:3.2.3"
     "@eslint/js": "npm:^9.17.0"
     "@storybook/addon-essentials": "npm:8.4.7"
