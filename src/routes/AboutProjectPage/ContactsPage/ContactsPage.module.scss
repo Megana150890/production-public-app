@@ -1,4 +1,93 @@
 @use '@styles/variables' as *;
 
 .container {
+	width: 100%;
+	max-width: var(--container);
+	// padding: 80px 160px 0;
+	margin: 0 auto;
+	position: relative;
+}
+
+.backgroundImage {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	// width: 567.19px;
+	// height: 286.8px;
+	align-items: center;
+	// left: 965px;
+	top: 97px;
+	background-image: url('/src/assets/airplane.png');
+	background-repeat: no-repeat;
+	// top: 50%;
+	// transform: translate(0, -50%);
+
+	left: 965px;
+}
+
+.title {
+	margin: 80px 0 48px;
+
+	font-size: 40px;
+	color: $titleFontColor;
+}
+
+.title_mobile {
+	margin-bottom: 30px;
+}
+
+.items {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(290px, 3fr));
+	gap: 32px;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.items_mobile {
+	grid-template-columns: repeat(auto-fill, minmax(252px, 2fr));
+	gap: 16px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+}
+
+.item_mobile {
+	row-gap: 5px;
+}
+
+.subtitle {
+	color: $titleFontColor;
+	font-family: var(--font-family-main);
+	font-weight: $fontWeightBold;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	margin: 0;
+}
+
+// .subtitle_mobile {
+// 	font-size: var(--font-size-xs);
+// 	line-height: var(--font-line-xs);
+// }
+
+.text {
+	color: $fontColor;
+	font-family: var(--font-family-main);
+	font-size: 1rem;
+	line-height: var(--font-line-s);
+	font-weight: $fontWeightMedium;
+}
+
+// .text_mobile {
+// 	font-size: var(--font-size-xxs);
+// 	line-height: var(--font-line-xxs);
+// }
+
+.link {
+	color: $linkFontColor;
+	text-decoration: underline;
 }

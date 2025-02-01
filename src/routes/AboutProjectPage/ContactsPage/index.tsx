@@ -1,5 +1,10 @@
 import React, { lazy, Suspense } from 'react';
-import { ActionFunctionArgs, LoaderFunctionArgs } from 'react-router';
+import {
+	ActionFunctionArgs,
+	LoaderFunctionArgs,
+	useLoaderData,
+} from 'react-router';
+import { mockContacts } from './mock';
 
 const LazyContactsPage = lazy(() =>
 	import('./ContactsPage').then((module) => ({
@@ -10,19 +15,25 @@ const LazyContactsPage = lazy(() =>
 const ContactsPage = (
 	props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
 ) => {
-	//здесь подключение данных
+	const data = useLoaderData<loaderResponse>();
 	return (
-		<Suspense fallback={null}>
-			<LazyContactsPage {...props} />
+		<Suspense fallback={<p>Loading...</p>}>
+			<LazyContactsPage {...props} contacts={data.contacts} />
 		</Suspense>
 	);
 };
 
+// Функция loader, которая будет возвращать моковые данные
 async function loader({ params, request }: LoaderFunctionArgs) {
-	return null; // тут будет вызов к апи исходя из данных запроса
+	return Promise.resolve({
+		contacts: mockContacts,
+	});
 }
 
-async function action({ params, request }: ActionFunctionArgs) {
+async function action({ request }: ActionFunctionArgs) {
+	const data = await request.formData();
+	const payload = Object.fromEntries(data.entries()) as object;
+	console.log(payload);
 	return null; // вызов к апи
 }
 
