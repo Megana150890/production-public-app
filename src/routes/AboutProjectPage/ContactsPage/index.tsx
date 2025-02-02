@@ -31,9 +31,6 @@ async function loader({ params, request }: LoaderFunctionArgs) {
 }
 
 async function action({ request }: ActionFunctionArgs) {
-	const data = await request.formData();
-	const payload = Object.fromEntries(data.entries()) as object;
-	console.log(payload);
 	return null; // вызов к апи
 }
 

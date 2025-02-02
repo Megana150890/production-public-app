@@ -20,7 +20,6 @@ export function ContactsPage({ className, contacts }: ContactsPageProps) {
 			{/* <Title Tag="h2" className={style.title}>
 		  Контакты
 		</Title> */}
-			<div className={style.backgroundImage} />
 			<h2 className={style.title}>Контакты</h2>
 			<ul className={style.items}>
 				{contacts.map((contact, index) => (
