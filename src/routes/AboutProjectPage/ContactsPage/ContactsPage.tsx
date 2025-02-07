@@ -1,28 +1,22 @@
 import clsx from 'clsx';
 import style from './ContactsPage.module.scss';
-// import { Title } from '@charitypro/ui-kit';
+import { loaderData } from './loaderData';
 
 export type ContactsPageProps = {
 	className?: string;
-	contacts: {
-		title: string;
-		description?: string;
-		email?: string;
-	}[];
+	data: loaderData;
 };
 
-export function ContactsPage({ className, contacts }: ContactsPageProps) {
+export function ContactsPage({ className, data }: ContactsPageProps) {
+	console.log(data);
 	return (
 		<div
 			className={clsx(style.container, className)}
 			data-testid="ContactsPage"
 		>
-			{/* <Title Tag="h2" className={style.title}>
-		  Контакты
-		</Title> */}
 			<h2 className={style.title}>Контакты</h2>
 			<ul className={style.items}>
-				{contacts.map((contact, index) => (
+				{data.contacts.map((contact, index) => (
 					<li key={index} className={style.item}>
 						<h3 className={style.subtitle}>{contact.title}</h3>
 						{contact.description && (

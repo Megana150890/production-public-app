@@ -4,7 +4,8 @@ import {
 	LoaderFunctionArgs,
 	useLoaderData,
 } from 'react-router';
-import { mockContacts } from './mock';
+
+import mock from './mock';
 
 const LazyContactsPage = lazy(() =>
 	import('./ContactsPage').then((module) => ({
@@ -18,16 +19,15 @@ const ContactsPage = (
 	const data = useLoaderData<loaderResponse>();
 	return (
 		<Suspense fallback={<p>Loading...</p>}>
-			<LazyContactsPage {...props} contacts={data.contacts} />
+			<LazyContactsPage {...props} data={data} />
 		</Suspense>
 	);
 };
 
 // Функция loader, которая будет возвращать моковые данные
 async function loader({ params, request }: LoaderFunctionArgs) {
-	return Promise.resolve({
-		contacts: mockContacts,
-	});
+	const { contacts } = await Promise.resolve(mock.data);
+	return { contacts };
 }
 
 async function action({ request }: ActionFunctionArgs) {

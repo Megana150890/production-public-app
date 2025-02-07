@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 import { ContactsPage } from './ContactsPage';
-import { mockContacts } from './mock';
+
 
 const meta = {
 	title: 'Root/ContactsPage',
@@ -22,8 +22,33 @@ type Story = StoryObj<typeof meta>;
 // More on interaction testing: https://storybook.js.org/docs/writing-tests/interaction-testing
 export const WithStateChanged: Story = {
 	args: {
-		className: '',
-		contacts: mockContacts, 
+		data: {
+			contacts: [
+				{
+					title: 'Адрес',
+					description: 'Москва, Арбат 35, здание «Дом Актера»',
+				},
+				{
+					title: 'Электронная почта',
+					email: 'procharity@friends-foundation.com',
+				},
+				{
+					title: 'По вопросам трудоустройства',
+					email: 'friends@friends-foundation.com',
+				},
+				{
+					title: 'По вопросам сотрудничества',
+					description:
+						'Алиса Петрова, руководитель направления партнерских проектов',
+					email: 'a.petrova@friends-foundation.com',
+				},
+				{
+					title: 'Для СМИ',
+					description: 'Елена Самсонова, PR-директор',
+					email: 'e.samsonova@friends-foundation.com',
+				},
+			],
+		},
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
